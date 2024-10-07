@@ -27,17 +27,22 @@ export default async function createQuestionCollection() {
 
     // create indexes 
 
-    await Promise.all([
-        databases.createIndex(
-            db,
-            questionCollection,
-            "title",
-            IndexType.Fulltext,
-            ["title"],
-            ['asc']
-        ),
-        
-    ])
-    
-    
+    // await Promise.all([
+    //     databases.createIndex(
+    //         db,
+    //         questionCollection,
+    //         "title",
+    //         IndexType.Fulltext,
+    //         ["title"],
+    //         ['asc']
+    //     ),
+    //     databases.createIndex(
+    //         db,
+    //         questionCollection,
+    //         "content",
+    //         IndexType.Fulltext,
+    //         ["title"],
+    //         ['asc']
+    //     ),        
+    // ])    
 }
